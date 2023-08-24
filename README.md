@@ -17,16 +17,3 @@ To get started with the Monty Interpreter, follow these steps:
 To run the Monty Interpreter, use the following command
 ```bash
 ./monty path/to/bytecode/file
-
-
-## Supported Opcodes 
-The interpreter supports the following opcodes:
-
-push: Pushes an integer onto the stack.
-pall: Prints all values on the stack.
-pint: Prints the value at the top of the stack.
-pop: Removes the top element from the stack.
-swap: Swaps the top two elements of the stack.
-add: Adds the top two elements of the stack.
-nop: No operation; does nothing.
-For more details on opcode usage and examples, refer to the provided Monty ByteCode files and the assignment instructions.
