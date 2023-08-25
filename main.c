@@ -4,8 +4,7 @@ int main(int argc, char *argv[])
 {
     instruction_t inst;
     stack_t *stack = NULL;
-    char *line = NULL;
-    size_t len = 0;
+    char line[1000];
     unsigned int line_number = 1;
     FILE *file;
 
@@ -24,7 +23,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    while (fgets(line, len, file) != NULL)
+    while (fgets(line, sizeof(line), file) != NULL)
     {
         char opcode[50];
         if (sscanf(line, "%49s", opcode) != 1)
@@ -62,8 +61,5 @@ int main(int argc, char *argv[])
 
     fclose(file);
     free_stack(&stack);
-    if (line)
-        free(line);
-
-    return 0;
+    return (0);
 }
