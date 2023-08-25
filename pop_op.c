@@ -20,10 +20,10 @@ void pop_op(stack_t **stack, unsigned int line_number)
     }
     else
     {
-        if ((*stack)->next == NULL)
+        if (ptr->next == NULL)
         {
-            free(*stack);
-	    *stack = NULL;
+            free(ptr);
+            *stack = NULL;
         }
         else
         {
@@ -33,5 +33,5 @@ void pop_op(stack_t **stack, unsigned int line_number)
             ptr->prev->next = NULL;
             free(ptr);
         }
-    }
+   }
 }
