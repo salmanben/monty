@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * mod_op -  computes the rest of the division 
+ * mod_op -  computes the rest of the division
  *of the second top element of the stack
  * by the top element of the stack.
  * @stack: A pointer to a pointer to the top of the stack.
@@ -16,7 +16,6 @@ void mod_op(stack_t **stack, unsigned int line_number)
 {
     stack_t *ptr = *stack;
     char str_error[50];
-    
     if (*stack == NULL || (*stack)->next == NULL)
     {
         sprintf(str_error, "L%d: can't mod, stack too short\n", line_number);
@@ -24,10 +23,9 @@ void mod_op(stack_t **stack, unsigned int line_number)
         exit(EXIT_FAILURE);
     }
     else
-    {   
+    {
         while (ptr->next != NULL)
-            ptr = ptr->next;
-           
+            ptr = ptr->next;      
         ptr->prev->n %= ptr->n;
         ptr->prev->next = NULL;
         free(ptr);
