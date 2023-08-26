@@ -15,7 +15,7 @@ void div_op(stack_t **stack, unsigned int line_number)
 {
     stack_t *ptr = *stack;
     char str_error[50];
-    if (*staick == NULL || (*stack)->next == NULL)
+    if (*stack == NULL || (*stack)->next == NULL)
     {
         sprintf(str_error, "L%d: can't div, stack too short\n", line_number);
         write(2, str_error, strlen(str_error));
