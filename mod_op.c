@@ -12,7 +12,7 @@
  *
  * Return: None.
  */
-void add_op(stack_t **stack, unsigned int line_number)
+void mod_op(stack_t **stack, unsigned int line_number)
 {
     stack_t *ptr = *stack;
     char str_error[50];
