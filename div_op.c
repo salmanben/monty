@@ -25,6 +25,11 @@ void div_op(stack_t **stack, unsigned int line_number)
     {
         while (ptr->next != NULL)
             ptr = ptr->next;
+	if (ptr->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
         ptr->prev->n /= ptr->n;
         ptr->prev->next = NULL;
         free(ptr);
