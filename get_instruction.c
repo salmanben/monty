@@ -18,6 +18,10 @@ instruction_t get_instruction(char *opcode)
         {"add", add_op},
         {"nop", nop_op},
 	{"pop", pop_op},
+	{"sub", sub_op},
+	{"mul", mul_op},
+	{"div", div_op},
+	{"mod", mod_op},
         {NULL, NULL}
     };
     
