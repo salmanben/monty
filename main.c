@@ -44,6 +44,10 @@ int main(int argc, char *argv[])
             }
             push_op(&stack, atoi(arg));
         }
+	else if (strcmp(opcode, "#") == 0)
+	{
+                  continue; 
+	}
         else
         {
             inst = get_instruction(opcode);
