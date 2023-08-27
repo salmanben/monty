@@ -48,6 +48,7 @@ void add_op(stack_t **stack, unsigned int line_number);
 void push_op(stack_t **stack, unsigned int n);
 void pint_op(stack_t **stack, unsigned int line_number);
 void nop_op(stack_t **stack, unsigned int line_number);
+void pchar_op(stack_t **stack, unsigned int line_number);
 /* helpful functions */
 instruction_t get_instruction(char *opcode);
 void free_stack(stack_t **stack);
