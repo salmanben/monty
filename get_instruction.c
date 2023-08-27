@@ -22,6 +22,7 @@ instruction_t get_instruction(char *opcode)
 	{"mul", mul_op},
 	{"div", div_op},
 	{"mod", mod_op},
+	{"pchar", pchar_op},
         {NULL, NULL}
     };
     
